@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cancer</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/health-favi.png"/>
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="/css/styles-lungs.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" action="{{ url_for('cancer_predict') }}" class="appointment-form" id="appointment-form">
+                <h2>Cancer Disease Prediction</h2>
+                <div class="form-group-1">
+                    <input type="number" step ="any" name="radius_mean" id="radius_mean" placeholder="radius_mean" required />
+                    <input type="number" step ="any" name="texture_mean" id="texture_mean" placeholder="texture_mean" required />
+                    <input type="number" step ="any" name="perimeter_mean" id="perimeter_mean" placeholder="perimeter_mean" required />
+                    <input type="number" step ="any" name="area_mean" id="area_mean" placeholder="area_mean" required />
+                    <input type="number" step ="any" name="smoothness_mean" id="smoothness_mean" placeholder="smoothness_mean" required />
+                    <input type="number" step ="any" name="compactness_mean" id="compactness_mean" placeholder="compactness_mean" required />
+                    <input type="number" step ="any" name="concavity_mean" id="concavity_mean" placeholder="concavity_mean" required />
+                    <input type="number" step ="any" name="concave points_mean" id="concave points_mean" placeholder="concave_points_mean" required />
+                    <input type="number" step ="any" name="symmetry_mean" id="symmetry_mean" placeholder="symmetry_mean" required />
+                    <input type="number" step ="any" name="fractal_dimension_mean" id="fractal_dimension_mean" placeholder="fractal_dimension_mean" required />
+                    <input type="number" step ="any" name="radius_se" id="radius_se" placeholder="radius_se" required />
+                    <input type="number" step ="any" name="texture_se" id="texture_se" placeholder="texture_se" required />
+                    <input type="number" step ="any" name="perimeter_se" id="perimeter_se" placeholder="perimeter_se" required />
+                    <input type="number" step ="any" name="area_se" id="area_se" placeholder="area_se" required />
+                    <input type="number" step ="any" name="smoothness_se" id="smoothness_se" placeholder="smoothness_se" required />
+                    <input type="number" step ="any" name="compactness_se" id="compactness_se" placeholder="compactness_se" required />
+                    <input type="number" step ="any" name="concavity_se" id="concavity_se" placeholder="concavity_se" required />
+                    <input type="number" step ="any" name="concave points_se" id="concave points_se" placeholder="concave points_se" required />
+                    <input type="number" step ="any" name="symmetry_se" id="symmetry_se" placeholder="symmetry_se" required />
+                    <input type="number" step ="any" name="fractal_dimension_se" id="fractal_dimension_se" placeholder="fractal_dimension_se" required />
+                    <input type="number" step ="any" name="radius_worst" id="radius_worst" placeholder="radius_worst" required />
+                    <input type="number" step ="any" name="texture_worst" id="texture_worst" placeholder="texture_worst" required />
+                    <input type="number" step ="any" name="perimeter_worst" id="perimeter_worst" placeholder="perimeter_worst" required />
+                    <input type="number" step ="any" name="area_worst" id="area_worst" placeholder="area_worst" required />
+                    <input type="number" step ="any" name="smoothness_worst" id="smoothness_worst" placeholder="smoothness_worst" required />
+                    <input type="number" step ="any" name="compactness_worst" id="compactness_worst" placeholder="compactness_worst" required />
+                    <input type="number" step ="any" name="concavity_worst" id="concavity_worst" placeholder="concavity_worst" required />
+                    <input type="number" step ="any" name="concave points_worst" id="concave points_worst" placeholder="concave_points_worst" required />
+                    <input type="number" step ="any" name="symmetry_worst" id="symmetry_worst" placeholder="symmetry_worst" required />
+                    <input type="number" step ="any" name="fractal_dimension_worst" id="fractal_dimension_worst" placeholder="fractal_dimension_worst" required />
+                    
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Predict" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

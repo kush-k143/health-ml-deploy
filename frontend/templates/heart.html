@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heart</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/health-favi.png"/>
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="/css/styles-heart.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" action="{{ url_for('heart_predict') }}" class="appointment-form" id="appointment-form">
+                <h2>Heart Disease Prediction</h2>
+                <div class="form-group-1">
+                    <input type="number" name="age" id="age" placeholder="Age" required />
+                    <input type="number" step ="any" name="cp" id="cp" placeholder="chest pain(0-4)" required />
+                    <input type="number" step ="any" name="trestbps" id="trestbps" placeholder="resting blood pressure" required />
+                    <input type="number" step ="any" name="chol" id="chol" placeholder="cholestrol" required />
+                    <input type="number" step ="any" name="fbs" id="fbs" placeholder="fasting blood sugar" required />
+                    <input type="number" step ="any" name="restecg" id="restecg" placeholder="resting electrocardiographic results (values 0,1,2)" required />
+                    <input type="number" step ="any" name="thalach" id="thalach" placeholder="maximum heart rate" required />
+                    <input type="number" step ="any" name="exang" id="exang" placeholder="exercise induced angina" required />
+                    <input type="number" step ="any" name="oldpeak" id="oldpeak" placeholder="oldpeak" required />
+                    <input type="number" step ="any" name="slope" id="slope" placeholder="ST segment" required />
+                    <input type="number" step ="any" name="ca" id="ca" placeholder="no. of major vessels" required />
+                    <input type="number" step ="any" name="thal" id="thal" placeholder="thal: 0 = normal; 1 = fixed defect; 2 = reversable defect" required />
+                
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Predict" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

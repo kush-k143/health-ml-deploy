@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diabetes</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/health-favi.png"/>
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="/css/styles-diabetes.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" action="{{ url_for('diabetes_predict') }}" class="appointment-form" id="appointment-form">
+                <h2>Diabetes disease Prediction</h2>
+                <div class="form-group-1">
+                    <input type="number"  name="Pregnancies" id="Pregnancies" placeholder="Pregnancies" required />
+                    <input type="number" step ="any" name="Glucose" id="Glucose" placeholder="Glucose" required />
+                    <input type="number" step ="any" name="BloodPressure" id="BloodPressure" placeholder="BloodPressure" required />
+                    <input type="number" step ="any" name="SkinThickness" id="SkinThickness" placeholder="SkinThickness" required />
+                    <input type="number" step ="any" name="Insulin" id="Insulin" placeholder="Insulin" required />
+                    <input type="number" step ="any" name="BMI" id="BMI" placeholder="BMI" required />
+                    <input type="number" step ="any" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required />
+                    <input type="number" step ="any" name="Age" id="Age" placeholder="Age" required />
+                
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Predict" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

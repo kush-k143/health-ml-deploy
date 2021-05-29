@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kideny</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/health-favi.png"/>
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="/css/styles-kidney.css">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" action="{{ url_for('kidney_predict') }}" class="appointment-form" id="appointment-form">
+                <h2>Kidney Disease Prediction</h2>
+                <div class="form-group-1">
+                    <input type="number" step ="any" name="age" id="age" placeholder="Age" required />
+                    <input type="number" step ="any" name="bp" id="bp" placeholder="blood pressure" required />
+                    <input type="number" step ="any" name="sg" id="sg" placeholder="specific gravity" required />
+                    <input type="number" step ="any" name="al" id="al" placeholder="albumin" required />
+                    <input type="number" step ="any" name="bgr" id="bgr" placeholder="blood glucose random" required />
+                    <input type="number" step ="any" name="bu" id="bu" placeholder="blood urea" required />
+                    <input type="number" step ="any" name="sc" id="sc" placeholder="serum creatinine" required />
+                    <input type="number" step ="any" name="hemo" id="hemo" placeholder="hemoglobin" required />
+                    <input type="number" step ="any" name="pcv" id="pcv" placeholder="packed cell volume" required />
+                    <input type="number" step ="any" name="pcc_present" id="pcc_present" placeholder="pcc_present" required />
+                    <input type="number" step ="any" name="htn" id="htn" placeholder="hypertension" required />
+                    <input type="number" step ="any" name="dm" id="dm" placeholder="diabetes mellitus" required />
+                    <input type="number" step ="any" name="cad" id="cad" placeholder="coronary artery disease" required />
+                    <input type="number" step ="any" name="appet" id="appet" placeholder="appetite" required />
+                    <input type="number" step ="any" name="ane" id="ane" placeholder="anemia" required />
+                    
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Predict" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

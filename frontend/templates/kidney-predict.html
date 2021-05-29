@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="/css/predict.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/health-favi.png"/>
+</head>
+<body>
+        <div class="container">
+            <div class="card">
+                {% block content %}
+                {% if prediction_kidney == 1 %}
+                <h1 class="card-title">Enjoy!! You are fit</h1>
+                    <small class="card-subtitle">You are not suffering.</small>
+                        <form class="card-form" action="{{ url_for('home') }}">
+                            <div class="tenor-gif-embed" data-postid="16971861" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/shy-blushing-wave-hi-hello-gif-16971861"></a><a href="https://tenor.com/search/shy-gifs"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                            <button  class="card-button">Home</button>
+                        </form>
+                {% else %}
+                <h1 class="card-title">Alert!! take care</h1>
+                    <small class="card-subtitle">You are suffering.</small>
+                        <form class="card-form" action="{{ url_for('home') }}">
+                            <div class="tenor-gif-embed" data-postid="14845187" data-share-method="host" data-width="100%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/boehoe-snif-sniff-sad-cry-gif-14845187"></a><a href="https://tenor.com/search/boehoe-gifs"></a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                            <button  class="card-button">Home</button>
+                        </form>
+                {% endif %}
+                {% endblock content %}
+            </div>
+        </div>
+</body>
+</html>
+
+
+
+
