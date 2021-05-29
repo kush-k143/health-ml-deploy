@@ -106,6 +106,10 @@ a.filled-button:hover {
 	letter-spacing: 5px;
 }
 
+.fit-img {
+	height: 10px;
+}
+
 #preloader {
   overflow: hidden;
   background: #f33f3f;
